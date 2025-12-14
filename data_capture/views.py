@@ -207,9 +207,9 @@ def upload_file(request):
             'upload_success',
             f"File {filename} uploaded and processed successfully."
         )
-        messages.success(request, 'File uploaded, scanned, sanitized, and data extracted successfully.')
+        messages.success(request, 'File uploaded successfully.')
     else:
-        messages.error(request, 'Failed to extract data from file.')
+        messages.error(request, 'Failed to upload file .')
 
     return redirect('home')
 

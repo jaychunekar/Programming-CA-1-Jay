@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('message', models.TextField()),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('is_resolved', models.BooleanField(default=False)),
-                ('user', models.ForeignKey(blank=True, help_text='User who sent the message (if logged in).', null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL)),
+                ('user', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

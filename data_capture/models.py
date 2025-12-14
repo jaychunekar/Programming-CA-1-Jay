@@ -9,9 +9,7 @@ class DataSource(models.Model):
     SOURCE_TYPES = [
         ('pdf', 'PDF'),
         ('excel', 'Excel'),
-        ('image', 'Image'),
-        ('website', 'Website'),
-        ('other', 'Other'),
+        ('image', 'Image')
     ]
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -59,8 +57,7 @@ class ContactMessage(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.SET_NULL,
         null=True,
-        blank=True,
-        help_text="User who sent the message (if logged in)."
+        blank=True
     )
     name = models.CharField(max_length=100)
     email = models.EmailField()
