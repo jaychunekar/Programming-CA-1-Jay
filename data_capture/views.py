@@ -306,7 +306,7 @@ def source_detail(request, pk):
     return render(request, 'data_capture/source_detail.html', context)
 
 
-@login_required
+
 @csrf_exempt
 def api_upload_file(request):
     if request.method != 'POST':
